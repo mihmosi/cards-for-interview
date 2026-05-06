@@ -1,0 +1,20 @@
+﻿<div class="app">
+  <header>
+    <h1>РљР°СЂС‚РѕС‡РєРё РІРѕРїСЂРѕСЃРѕРІ РґР»СЏ РёРЅС‚РµСЂРІСЊСЋ</h1>
+    <p>РР·СѓС‡РµРЅРѕ: {{ getLearnedCount() }} / {{ getTotalCount() }}</p>
+  </header>
+
+  <div class="filters">
+    <label for="category">РљР°С‚РµРіРѕСЂРёСЏ:</label>
+    <select id="category" [(ngModel)]="selectedCategory" (change)="filterByCategory()">
+      <option value="Р’СЃРµ">Р’СЃРµ</option>
+      <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+    </select>
+  </div>
+
+  <div class="cards-container">
+    <app-card *ngFor="let question of filteredQuestions" [question]="question"></app-card>
+  </div>
+</div>
+
+

@@ -1,0 +1,16 @@
+<div class="card" [class.flipped]="isFlipped" (click)="toggleFlip()">
+  <div class="card-inner">
+    <div class="card-front">
+      <h3>{{ question.category }}</h3>
+      <p>{{ question.question }}</p>
+      <div class="actions">
+        <button (click)="markAsLearned(); $event.stopPropagation()" [disabled]="isLearned()">Изучено</button>
+        <button (click)="unmarkAsLearned(); $event.stopPropagation()" [disabled]="!isLearned()">Не изучено</button>
+      </div>
+    </div>
+    <div class="card-back">
+      <h3>Ответ</h3>
+      <p>{{ question.answer || 'Ответ не предоставлен. Попробуйте найти его самостоятельно!' }}</p>
+    </div>
+  </div>
+</div>
