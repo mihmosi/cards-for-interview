@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Card } from './card/card';
 import { QuestionsService } from './services/questions.service';
-import { ProgressService } from './progress.service';
+import { ProgressService } from './services/progress.service';
 import { Question } from './data/questions';
 
 @Component({
