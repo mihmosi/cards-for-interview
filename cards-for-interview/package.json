@@ -27,5 +27,39 @@
     "@angular/compiler-cli": "^21.2.0",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2"
+  },
+  "architect": {
+    "build": {
+      "builder": "@angular/build:application",
+      "options": {
+        "browser": "src/main.ts",
+        "tsConfig": "tsconfig.app.json",
+        "outputPath": {
+          "base": "docs",
+          "browser": ""
+        },
+        "baseHref": "/cards-for-interview/",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "public"
+          }
+        ],
+        "styles": [
+          "src/styles.css"
+        ]
+      },
+      "configurations": {
+        "production": {
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    }
   }
 }
