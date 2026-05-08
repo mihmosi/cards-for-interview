@@ -1,11 +1,11 @@
 ﻿<div class="app">
   <header>
-    <h1>РљР°СЂС‚РѕС‡РєРё РІРѕРїСЂРѕСЃРѕРІ РґР»СЏ РёРЅС‚РµСЂРІСЊСЋ</h1>
-    <p>РР·СѓС‡РµРЅРѕ: {{ getLearnedCount() }} / {{ getTotalCount() }}</p>
+    <h1>Вопросы кандидату на должность фронтенд-разработчика</h1>
+    <p>Изучено из предложенных: {{ getLearnedCount() }} / {{ getTotalCount() }}</p>
   </header>
 
   <div class="filters">
-    <label for="category">РљР°С‚РµРіРѕСЂРёСЏ:</label>
+    <label for="category">Категории вопросов:</label>
     <select id="category" [(ngModel)]="selectedCategory" (change)="filterByCategory()">
       <option value="Р’СЃРµ">Р’СЃРµ</option>
       <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
