@@ -13,7 +13,8 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "es6"
+    "module": "es6",
+    "moduleResolution": "bundler"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
