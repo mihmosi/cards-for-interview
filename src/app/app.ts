@@ -17,7 +17,7 @@ export class App implements OnInit {
   questions: Question[] = [];
   filteredQuestions: Question[] = [];
   categories: string[] = [];
-  selectedCategory = 'Все';
+  selectedCategory = '';
 
   constructor(
     private questionsService: QuestionsService,
@@ -31,7 +31,7 @@ export class App implements OnInit {
   }
 
   filterByCategory() {
-    if (this.selectedCategory === 'Все') {
+    if (this.selectedCategory === 'Все' || this.selectedCategory === '') {
       this.filteredQuestions = this.questions;
     } else {
       this.filteredQuestions = this.questionsService.getQuestionsByCategory(this.selectedCategory);

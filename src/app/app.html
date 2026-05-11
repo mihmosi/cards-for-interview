@@ -7,7 +7,8 @@
   <div class="filters">
     <label for="category">Категории вопросов:</label>
     <select id="category" [(ngModel)]="selectedCategory" (change)="filterByCategory()">
-      <option value="Р’СЃРµ">Р’СЃРµ</option>
+      <option disabled value="">Выберите категорию</option>
+      <option value="Все">Все</option>
       <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
     </select>
   </div>
